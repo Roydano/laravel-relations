@@ -11,6 +11,13 @@
         @endif
     </p>
     <p>
+        @if (session('create'))
+        <div class="alert alert-success">
+        {{ session('create') }}
+        </div>
+        @endif
+    </p>
+    <p>
         @if (session('delete'))
         <div class="alert alert-danger">
         {{ session('delete') }}

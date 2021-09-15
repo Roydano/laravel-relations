@@ -30,7 +30,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create');
+        $categories = Category::all();
+        return view('admin.posts.create', compact('categories'));
     }
 
     /**
@@ -67,7 +68,7 @@ class PostController extends Controller
 
         $newPost->save( );
 
-        return redirect( )->route('admin.posts.index');
+        return redirect( )->route('admin.posts.index')->with('create', 'Hai creato un nuovo post!');
 
     }
 
