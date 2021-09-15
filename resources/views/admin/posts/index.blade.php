@@ -32,7 +32,11 @@
             <tr>
                 <th scope="row">{{ $post->id }} </th>
                 <td>{{ $post->title }}</td>
-                <td> vuota per ora</td>
+                <td>
+                    @if($post->category )
+                        {{ $post->category->name }}
+                    @endif
+                </td>
                 <td>{{ $post->author }}</td>
                 <td>
                     <a href="{{ route('admin.posts.show', $post->id) }}" type="button" class="btn btn-primary">Show</a>
