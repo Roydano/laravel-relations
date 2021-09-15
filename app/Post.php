@@ -11,6 +11,11 @@ class Post extends Model
         'title',
         'slug',
         'description',
-        'author'
+        'author',
+        'category_id'
     ];
+
+    public function category(){
+        return $this->belongsTo('App\Category');
+    }
 }
