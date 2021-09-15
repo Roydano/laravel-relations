@@ -22,6 +22,7 @@
             <tr>
                 <th scope="col">Codice</th>
                 <th scope="col">Titolo</th>
+                <th scope="col">Categoria</th>
                 <th scope="col">Autore</th>
                 <th scope="col">Azioni</th>
             </tr>
@@ -31,6 +32,7 @@
             <tr>
                 <th scope="row">{{ $post->id }} </th>
                 <td>{{ $post->title }}</td>
+                <td> vuota per ora</td>
                 <td>{{ $post->author }}</td>
                 <td>
                     <a href="{{ route('admin.posts.show', $post->id) }}" type="button" class="btn btn-primary">Show</a>
